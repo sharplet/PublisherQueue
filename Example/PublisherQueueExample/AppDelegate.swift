@@ -2,32 +2,31 @@ import Combine
 import PublisherQueue
 import UIKit
 
-func randomInt() -> Deferred<Future<Int, Never>> {
-  Deferred {
-    Future { promise in
-      DispatchQueue.global().asyncAfter(deadline: .now() + 0.001) {
-        promise(.success(.random(in: .min ... .max)))
-      }
-    }
-  }
-}
-
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
   var subscriptions = Set<AnyCancellable>()
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    let q = PublisherQueue(size: .max)
-    var resultCount = 0
+    let total = 1000
     let group = DispatchGroup()
-    for _ in 1 ... 1000 {
+    let queue = PublisherQueue(size: total)
+
+    var count = 0
+
+    for i in 0 ..< total {
+      let publisher = Just(i)
+        .subscribe(on: DispatchQueue.global())
+        .enqueue(on: queue)
+
       group.enter()
-      q.queuedPublisher(randomInt()).sink(receiveCompletion: { _ in group.leave() }) { number in
-        resultCount += 1
+      publisher.sink { _ in
+        count += 1
+        group.leave()
       }.store(in: &subscriptions)
     }
+
     group.wait()
-    print(resultCount, "results")
+    print("Expected: \(total), received: \(count)")
     return true
   }
 
