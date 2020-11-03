@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,13 +13,11 @@
 		4A6DBA2F254B516900D4B341 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A6DBA2D254B516900D4B341 /* Main.storyboard */; };
 		4A6DBA31254B516B00D4B341 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6DBA30254B516B00D4B341 /* Assets.xcassets */; };
 		4A6DBA34254B516B00D4B341 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A6DBA32254B516B00D4B341 /* LaunchScreen.storyboard */; };
-		4A6DBA3D254B517300D4B341 /* AnyEventPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6DBA3C254B517300D4B341 /* AnyEventPublisher.swift */; };
-		4A6DBA40254B518200D4B341 /* PublisherQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6DBA3F254B518200D4B341 /* PublisherQueue.swift */; };
-		4A6DBA44254B53C700D4B341 /* QueuedPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6DBA43254B53C700D4B341 /* QueuedPublisher.swift */; };
+		4A9A91A82551AAE7003238CA /* PublisherQueue in Frameworks */ = {isa = PBXBuildFile; productRef = 4A9A91A72551AAE7003238CA /* PublisherQueue */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4A6DBA24254B516900D4B341 /* PublisherQueue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PublisherQueue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A6DBA24254B516900D4B341 /* PublisherQueueExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PublisherQueueExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6DBA27254B516900D4B341 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A6DBA29254B516900D4B341 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4A6DBA2B254B516900D4B341 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,9 +25,7 @@
 		4A6DBA30254B516B00D4B341 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A6DBA33254B516B00D4B341 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A6DBA35254B516B00D4B341 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A6DBA3C254B517300D4B341 /* AnyEventPublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyEventPublisher.swift; sourceTree = "<group>"; };
-		4A6DBA3F254B518200D4B341 /* PublisherQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherQueue.swift; sourceTree = "<group>"; };
-		4A6DBA43254B53C700D4B341 /* QueuedPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueuedPublisher.swift; sourceTree = "<group>"; };
+		4A9A91A22551AABB003238CA /* PublisherQueue */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PublisherQueue; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A9A91A82551AAE7003238CA /* PublisherQueue in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,26 +43,25 @@
 		4A6DBA1B254B516900D4B341 = {
 			isa = PBXGroup;
 			children = (
-				4A6DBA26254B516900D4B341 /* PublisherQueue */,
+				4A6DBA26254B516900D4B341 /* PublisherQueueExample */,
+				4A9A91A12551AAA9003238CA /* Packages */,
 				4A6DBA25254B516900D4B341 /* Products */,
+				4A9A91A62551AAE7003238CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		4A6DBA25254B516900D4B341 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4A6DBA24254B516900D4B341 /* PublisherQueue.app */,
+				4A6DBA24254B516900D4B341 /* PublisherQueueExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4A6DBA26254B516900D4B341 /* PublisherQueue */ = {
+		4A6DBA26254B516900D4B341 /* PublisherQueueExample */ = {
 			isa = PBXGroup;
 			children = (
-				4A6DBA3C254B517300D4B341 /* AnyEventPublisher.swift */,
 				4A6DBA27254B516900D4B341 /* AppDelegate.swift */,
-				4A6DBA3F254B518200D4B341 /* PublisherQueue.swift */,
-				4A6DBA43254B53C700D4B341 /* QueuedPublisher.swift */,
 				4A6DBA29254B516900D4B341 /* SceneDelegate.swift */,
 				4A6DBA2B254B516900D4B341 /* ViewController.swift */,
 				4A6DBA2D254B516900D4B341 /* Main.storyboard */,
@@ -73,15 +69,30 @@
 				4A6DBA32254B516B00D4B341 /* LaunchScreen.storyboard */,
 				4A6DBA35254B516B00D4B341 /* Info.plist */,
 			);
-			path = PublisherQueue;
+			path = PublisherQueueExample;
+			sourceTree = "<group>";
+		};
+		4A9A91A12551AAA9003238CA /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				4A9A91A22551AABB003238CA /* PublisherQueue */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		4A9A91A62551AAE7003238CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4A6DBA23254B516900D4B341 /* PublisherQueue */ = {
+		4A6DBA23254B516900D4B341 /* PublisherQueueExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4A6DBA38254B516B00D4B341 /* Build configuration list for PBXNativeTarget "PublisherQueue" */;
+			buildConfigurationList = 4A6DBA38254B516B00D4B341 /* Build configuration list for PBXNativeTarget "PublisherQueueExample" */;
 			buildPhases = (
 				4A6DBA20254B516900D4B341 /* Sources */,
 				4A6DBA21254B516900D4B341 /* Frameworks */,
@@ -91,9 +102,12 @@
 			);
 			dependencies = (
 			);
-			name = PublisherQueue;
+			name = PublisherQueueExample;
+			packageProductDependencies = (
+				4A9A91A72551AAE7003238CA /* PublisherQueue */,
+			);
 			productName = PublisherQueue;
-			productReference = 4A6DBA24254B516900D4B341 /* PublisherQueue.app */;
+			productReference = 4A6DBA24254B516900D4B341 /* PublisherQueueExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -110,7 +124,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4A6DBA1F254B516900D4B341 /* Build configuration list for PBXProject "PublisherQueue" */;
+			buildConfigurationList = 4A6DBA1F254B516900D4B341 /* Build configuration list for PBXProject "PublisherQueueExample" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -123,7 +137,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4A6DBA23254B516900D4B341 /* PublisherQueue */,
+				4A6DBA23254B516900D4B341 /* PublisherQueueExample */,
 			);
 		};
 /* End PBXProject section */
@@ -147,11 +161,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A6DBA2C254B516900D4B341 /* ViewController.swift in Sources */,
-				4A6DBA40254B518200D4B341 /* PublisherQueue.swift in Sources */,
 				4A6DBA28254B516900D4B341 /* AppDelegate.swift in Sources */,
-				4A6DBA3D254B517300D4B341 /* AnyEventPublisher.swift in Sources */,
 				4A6DBA2A254B516900D4B341 /* SceneDelegate.swift in Sources */,
-				4A6DBA44254B53C700D4B341 /* QueuedPublisher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +310,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PublisherQueue/Info.plist;
+				INFOPLIST_FILE = PublisherQueueExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,7 +328,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PublisherQueue/Info.plist;
+				INFOPLIST_FILE = PublisherQueueExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,7 +343,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4A6DBA1F254B516900D4B341 /* Build configuration list for PBXProject "PublisherQueue" */ = {
+		4A6DBA1F254B516900D4B341 /* Build configuration list for PBXProject "PublisherQueueExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A6DBA36254B516B00D4B341 /* Debug */,
@@ -341,7 +352,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4A6DBA38254B516B00D4B341 /* Build configuration list for PBXNativeTarget "PublisherQueue" */ = {
+		4A6DBA38254B516B00D4B341 /* Build configuration list for PBXNativeTarget "PublisherQueueExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A6DBA39254B516B00D4B341 /* Debug */,
@@ -351,6 +362,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4A9A91A72551AAE7003238CA /* PublisherQueue */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PublisherQueue;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4A6DBA1C254B516900D4B341 /* Project object */;
 }

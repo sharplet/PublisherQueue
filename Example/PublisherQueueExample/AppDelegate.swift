@@ -1,4 +1,5 @@
 import Combine
+import PublisherQueue
 import UIKit
 
 func randomInt() -> Deferred<Future<Int, Never>> {
@@ -19,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let q = PublisherQueue(size: .max)
     var resultCount = 0
     let group = DispatchGroup()
-    for _ in 1 ... 1 {
+    for _ in 1 ... 1000 {
       group.enter()
       q.queuedPublisher(randomInt()).sink(receiveCompletion: { _ in group.leave() }) { number in
         resultCount += 1
