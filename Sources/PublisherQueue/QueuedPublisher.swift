@@ -23,7 +23,7 @@ private extension QueuedPublisher {
 
     init(subscriber: S, queuedPublisher: AnyPublisher<AnyEvent, Never>) {
       self.downstream = subscriber
-      queuedPublisher.subscribe(self)
+      queuedPublisher.subscribe(self) // sets self.upstream
     }
   }
 }
